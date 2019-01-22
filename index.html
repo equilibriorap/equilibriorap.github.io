@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Equilíbrio</title>
+    <link rel="shortcut icon" href="img/Logo_E.png" type="image/ico">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Mina" rel="stylesheet">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.0.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="js/particles.js"></script>
+    <script src="js/clickable.js"></script>
+    <script src="js/hover.js"></script>
+  </head>
+  <body id="main" class="main">
+    <div id="equilibrio"><img id="mylogo" src="img/KC_Logo.png">
+      <table class="logos">
+        <tbody class="ltable">
+          <tr>
+            <td><a href="#about">
+                <div class="about"><img src="img/logos/about.png"></div></a></td>
+            <td><a href="#covers">
+                <div class="music"><img src="img/logos/music.png"></div></a></td>
+            <td><a href="#images">
+                <div class="images"><img src="img/logos/images.png"></div></a></td>
+            <td><a href="#timeline">
+                <div class="concerts"><img src="img/logos/concerts.png"></div></a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="particles-js" class="noparticles"></div>
+    <div id="stars-bg">
+      <div id="stars" class="stars"></div>
+      <div id="stars2" class="stars2"></div>
+      <div id="stars3" class="stars3"></div>
+    </div>
+    <div id="about">
+      <h1>Sobre mim</h1>
+      <table id="text">
+        <tbody>
+          <tr>
+            <td id="collumn">
+              <p>Gonçalo Costa AKA Equilíbrio, 22 anos , músico natural de Amarante, descobriu a paixão pela escrita, interligando-se, rapidamente, com o Rap e a cultura Hip Hop por volta de 2010, lança o seu primeiro trabalho em 2013 com a mixtape “Reunião de amigos, o Ep “Parte de Mim” em 2015 e recentemente o álbum LUZ. </p>
+              <p>Estuda Engenharia Electrotécnica e de Computadores na Faculdade de Engenharia da Universidade do Porto e tenta balancear o seu tempo de modo a conseguir atingir os seus dois objectivos, tornar-se engenheiro e um grande músico.</p>
+            </td>
+            <td id="collumn">
+              <div id="imgdiv">
+                <image src="img/about.jpeg" type="image/png"></image>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="covers">
+      <h1>A minha música</h1>
+      <table class="covers">
+        <tbody class="ctable">
+          <tr>
+            <td id="parte">
+              <div class="parte_de_mim"><img src="img/parte_frente.png" class="front"><img src="img/parte_tras.png" class="back"></div>
+            </td>
+            <td id="luz">
+              <div class="luz"><img src="img/luz_frente.png" class="front"><img src="img/luz_tras.png" class="back"></div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="player-bg"></div>
+    <div id="player">
+      <iframe width="100%" height="100%" sharing="false" scrolling="no" frameborder="yes" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/116345831&amp;color=%23090a0f&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true" id="player_parte" class="off"></iframe>
+      <iframe width="100%" height="100%" sharing="false" scrolling="no" frameborder="yes" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/354364609&amp;color=%23090a0f&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true" id="player_luz" class="on"></iframe>
+    </div>
+    <div id="images">
+      <h1>Multimédia</h1>
+      <div class="w3-content w3-display-container centered"><img src="img/images/img1.jpeg" style="width:100%" class="mySlides"><img src="img/images/img2.jpeg" style="width:100%" class="mySlides"><img src="img/images/img3.jpeg" style="width:100%" class="mySlides"><img src="img/images/img4.jpeg" style="width:100%" class="mySlides"><img src="img/images/img5.jpeg" style="width:100%" class="mySlides"><img src="img/images/img6.png" style="width:100%" class="mySlides"><img src="img/images/img7.jpeg" style="width:100%" class="mySlides"><img src="img/images/img8.jpg" style="width:100%" class="mySlides"><img src="img/images/img9.jpeg" style="width:100%" class="mySlides"><img src="img/images/img10.jpeg" style="width:100%" class="mySlides"><img src="img/images/img11.jpeg" style="width:100%" class="mySlides"><img src="img/images/img12.jpeg" style="width:100%" class="mySlides"><img src="img/images/img13.jpeg" style="width:100%" class="mySlides"><img src="img/images/img14.jpeg" style="width:100%" class="mySlides"><img src="img/images/img15.jpeg" style="width:100%" class="mySlides"><img src="img/images/img16.jpeg" style="width:100%" class="mySlides"><img src="img/images/img17.jpeg" style="width:100%" class="mySlides">
+        <button onclick="plusDivs(-1)" class="w3-button w3-black w3-display-left">&#10094</button>
+        <button onclick="plusDivs(1)" class="w3-button w3-black w3-display-right">&#10095</button>
+      </div>
+    </div>
+    <div id="timeline">
+      <h1>Concertos</h1>
+      <div class="timeline">
+        <div class="container left">
+          <div class="content">
+            <h3>Hardclub</h3>
+            <p>2018</p><img src="img/hard.jpg" style="width:90%" class="img_time">
+          </div>
+        </div>
+        <div class="container right">
+          <div class="content">
+            <h3>Arrail de Engenharia</h3>
+            <p>2017</p><img src="img/album.jpeg" style="width:90%" class="img_time">
+          </div>
+        </div>
+        <div class="container left">
+          <div class="content">
+            <h3>CCA Maria Amélia Laranjeira</h3>
+            <p>2017</p><img src="img/cca.jpg" style="width:90%" class="img_time">
+          </div>
+        </div>
+        <div class="container right">
+          <div class="content">
+            <h3>AEFEUP</h3>
+            <p>2016</p><img src="img/aefeup.jpg" style="width:90%" class="img_time">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="socialmedia">
+      <h1>Sabe mais em: </h1>
+      <h3>equilibriorap95@gmail.com</h3>
+      <div id="icon">    <a href="https://www.facebook.com/equilibriop95/" target="_blank"> <img src="img/facebook.png" alt="facebook">
+          <h3>Facebook</h3></a><a href="https://www.instagram.com/___equilibrio___/" target="_blank"> <img src="img/instagram.png" alt="instagram">
+          <h3>instagram</h3></a><a href="https://soundcloud.com/equil-brio" target="_blank"> <img src="img/soundcloud.png" alt="soundcloud">
+          <h3>soundcloud</h3></a><a href="https://open.spotify.com/album/07DI3jbiuwFN9OOhyGxz1o" target="_blank"> <img src="img/spotify.png" alt="spotify">
+          <h3>spotify</h3></a><a href="https://www.youtube.com/channel/UCKwIqLzfmX2RcFxAmC3_2qg" target="_blank"> <img src="img/youtube.png" alt="youtube">
+          <h3>youtube</h3></a><a href="https://equilbrio.bandcamp.com/releases" target="_blank"> <img src="img/bandcamp.png" alt="bandcamp">
+          <h3>bandcamp</h3></a></div>
+    </div>
+  </body>
+  <head>
+    <script src="js/slide.js"></script>
+  </head>
+</html>

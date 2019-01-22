@@ -1,0 +1,504 @@
+
+// n is number of stars required
+@function multiple-box-shadow ($n)
+  $value: '#{random(2000)}px #{random(2000)}px #FFF'
+  @for $i from 2 through $n
+    $value: '#{$value} , #{random(2000)}px #{random(2000)}px #FFF'
+
+  @return unquote($value)
+
+$shadows-small:  multiple-box-shadow(700)
+$shadows-medium: multiple-box-shadow(200)
+$shadows-big:    multiple-box-shadow(100)
+
+#main
+  font-family: 'Mina', sans-serif
+  width: auto
+  height: 100%
+  transition: all 0.4s ease-in-out
+  #stars-bg
+    position: fixed
+    right: 0
+    bottom: 0
+    width: 100%
+    height: 100%
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%)
+    overflow: hidden
+    #stars
+      width: 1px
+      height: 1px
+      background: transparent
+      box-shadow: $shadows-small
+      &:after
+        content: " "
+        position: absolute
+        top: 2000px
+        width: 1px
+        height: 1px
+        background: transparent
+        box-shadow: $shadows-small
+    #stars2
+      width: 2px
+      height: 2px
+      background: transparent
+      box-shadow: $shadows-medium
+      &:after
+        content: " "
+        position: absolute
+        top: 2000px
+        width: 2px
+        height: 2px
+        background: transparent
+        box-shadow: $shadows-medium
+    #stars3
+      width: 3px
+      height: 3px
+      background: transparent
+      box-shadow: $shadows-big
+      &:after
+        content: " "
+        position: absolute
+        top: 2000px
+        width: 3px
+        height: 3px
+        background: transparent
+        box-shadow: $shadows-big
+  #particles-js
+    position: absolute
+    width: 100%
+    height: 100%
+    background-color: none
+    transition: all 0.4s ease-in-out
+    z-index: 2
+  #about
+    display: block
+    position: absolute
+    top: 110%
+    z-index: 3
+    color: white
+    opacity: 1
+    h1
+      font-family: 'Mina', sans-serif
+      margin-top: 10px
+      margin-bottom: 50px
+      margin-left: auto
+      margin-right: auto
+      font-size: 30px
+      text-align: center
+      text-transform: uppercase
+    #text
+      z-index: 3
+      margin-bottom: 50px
+      margin-left: auto
+      margin-right: auto
+      width: 70%
+      tbody
+        z-index: 2
+        td
+          font-size: 18px
+          text-indent: 3em
+          text-align: justify
+          width: 50%
+          #imgdiv
+            width: 70%
+            margin-right: auto
+            margin-left: auto
+            img
+              margin-right: auto
+              margin-left: auto
+              width: 90%
+              -webkit-box-shadow: 0px 0px 85px -5px rgba(0,0,0,0.75)
+              -moz-box-shadow: 0px 0px 85px -5px rgba(0,0,0,0.75)
+              box-shadow: 0px 0px 85px -5px rgba(0,0,0,0.75)
+  #equilibrio
+    opacity: 1
+    display: block
+    width: 40%
+    height: 45%
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    transition: all 0.2s ease-in-out
+    z-index: 3
+    #mylogo
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      width: 90%
+      height: auto
+      z-index: 2
+      filter: blur(5px)
+      transition: all 0.2s ease-in-out
+    &:hover
+      #mylogo
+        width: 93%
+        height: auto
+        filter: blur(0px)
+        transform: translate(-50%, -80%)
+      .logos
+        opacity: 1
+    .logos
+      transition: all 0.2s ease-in-out
+      width: 100%
+      opacity: 0
+      margin-top: 25%
+      height: 50%
+      .ltable
+        tr
+          height: 20%
+          td
+            padding: 10px
+            div
+              height: 50px
+              width: 50px
+              margin: auto
+              display: flex
+              align-items: center
+              justify-content: center
+              border-radius: 50%
+              img
+                margin: auto
+                width: 40px
+                height: 40px
+                filter: blur(2px)
+                transition: all 0.2s ease-in-out
+            &:hover
+              img
+                filter: blur(0px)
+                width: 50px
+                height: 50px
+  #covers
+    z-index: 3
+    position: absolute
+    height: 170px
+    width: 100%
+    top: 180%
+    max-width: 100%
+    text-align: center
+    text-transform: uppercase
+    color: white
+    h1
+      font-family: 'Mina', sans-serif
+      margin-top: 10px
+      margin-bottom: 10px
+      margin-left: auto
+      margin-right: auto
+      font-size: 30px
+      text-align: center
+      text-transform: uppercase
+    .covers
+      position: relative
+      transition: all 0.2s ease-in-out
+      width: 60%
+      margin: auto
+      opacity: 1
+      height: 350px
+      text-align: left
+      .ctable
+        tr
+          td
+            perspective: 1000px
+            cursor: pointer
+            &:hover
+              div
+                transform: rotateY(180deg)
+            div
+              height: 250px
+              width: 250px
+              margin: auto
+              display: flex
+              perspective: 1000px
+              transform-style: preserve-3d
+              align-items: center
+              justify-content: center
+              display: block
+              transition: all 0.6s ease-in-out
+              img
+                height: 230px
+                width: 230px
+                backface-visibility: hidden
+                position: absolute
+                z-index: 5
+              .back
+                z-index: 4
+                transform: rotateY(180deg)
+  #player-bg
+    width: 70%
+    height: 100%
+    position: absolute
+    top: 240%
+    margin-bottom: 100px
+    background-image: url("/img/album.jpeg")
+    filter: blur(50%)
+    opacity: 0.8
+    left: 50%
+    margin-left: -35%
+  #player
+    width: 70%
+    height: 100%
+    position: absolute
+    top: 240%
+    margin-bottom: 100px
+    left: 50%
+    margin-left: -35%
+    -webkit-box-shadow: 0px 0px 85px -5px rgba(0,0,0,0.75)
+    -moz-box-shadow: 0px 0px 85px -5px rgba(0,0,0,0.75)
+    box-shadow: 0px 0px 85px -5px rgba(0,0,0,0.75)
+    iframe
+      transition: all 0.6s ease-in-out
+      position: absolute
+  #images
+    position: absolute
+    top: 350%
+    margin-left: -25%
+    left: 50%
+    width: 50%
+    height: 65%
+    margin-bottom: 1200px
+    transition: all 0.6s ease-in-out
+    h1
+      font-family: 'Mina', sans-serif
+      margin-top: 10px
+      margin-bottom: 10px
+      margin-left: auto
+      margin-right: auto
+      font-size: 30px
+      text-align: center
+      text-transform: uppercase
+      color: white
+
+    .centered
+      margin: auto
+      margin-top: 70px
+      height: 100%
+      width: auto
+      border: 10px solid white
+      img
+        position: absolute
+        top: 50%
+        left: 50%
+        height: 100%
+        width: 100%
+        transform: translate(-50%, -50%)
+        transition: all 0.6s ease-in-out
+      button
+        opacity: 0.8
+      button:focus
+        outline: none !important
+    video
+      position: absolute
+      margin-top: 100px
+      border: 10px solid white
+  #timeline
+    position: absolute
+    top: 515%
+    margin-left: -35%
+    left: 50%
+    width: 70%
+    max-width: 70%
+    height: 100%
+    transition: all 0.6s ease-in-out
+    h1
+      font-family: 'Mina', sans-serif
+      margin-top: 10px
+      margin-bottom: 10px
+      margin-left: auto
+      margin-right: auto
+      font-size: 30px
+      text-align: center
+      text-transform: uppercase
+      color: white
+
+*
+  box-sizing: border-box
+
+
+/* The actual timeline (the vertical ruler) */
+.timeline
+  position: relative
+  max-width: 1200px
+  margin: 0 auto
+  font-family: Helvetica, sans-serif
+  text-transform: none
+  color: black
+  max-width: 100%
+  opacity: 0.8
+  margin-top: 80px
+  h1
+    color: black
+
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after
+  content: ''
+  position: absolute
+  width: 6px
+  background: linear-gradient(white, white, transparent)
+  top: 0
+  bottom: 0
+  left: 50%
+  margin-left: -3px
+
+/* Container around content */
+.container
+  padding: 10px 40px
+  position: relative
+  background-color: inherit
+  width: 50%
+  max-width: 50%
+
+.img_time
+  border-radius: 6px
+/* The circles on the timeline */
+.container::after
+  content: ''
+  position: absolute
+  width: 25px
+  height: 25px
+  right: -12px
+  background-color: #1B2735
+  border: 4px solid white
+  top: 15px
+  border-radius: 50%
+  z-index: 1
+/* Place the container to the left */
+.left
+  left: 0
+
+/* Place the container to the right */
+.right
+  left: 50%
+
+/* Add arrows to the left container (pointing right) */
+.left::before
+  content: " "
+  height: 0
+  position: absolute
+  top: 22px
+  width: 0
+  z-index: 1
+  right: 30px
+  border: medium solid white
+  border-width: 10px 0 10px 10px
+  border-color: transparent transparent transparent white
+
+/* Add arrows to the right container (pointing left) */
+.right::before
+  content: " "
+  height: 0
+  position: absolute
+  top: 22px
+  width: 0
+  z-index: 1
+  left: 30px
+  border: medium solid white
+  border-width: 10px 10px 10px 0
+  border-color: transparent white transparent transparent
+
+/* Fix the circle for containers on the right side */
+.right::after
+  left: -12px
+
+
+/* The actual content */
+.content
+  text-align: center
+  padding: 20px 30px
+  background-color: white
+  position: relative
+  border-radius: 6px
+
+.socialmedia
+  position: absolute
+  margin-bottom: 100px
+  z-index: 3
+  width: 100%
+  height: 80px
+  top: 760%
+  h3
+    font-family: 'Mina', sans-serif
+    margin-top: 20px
+    margin-left: auto
+    margin-right: auto
+    font-size: 15px
+    text-align: center
+    color: white
+    opacity: 0.9
+    filter: blur(1px)
+    transition: all 0.4s ease-in-out
+    &:hover
+      filter: blur(0px)
+      cursor: default
+  h1
+    font-family: 'Mina', sans-serif
+    margin-top: 10px
+    margin-bottom: 10px
+    margin-left: auto
+    margin-right: auto
+    font-size: 25px
+    text-align: center
+    text-transform: uppercase
+    color: white
+  #icon
+    width: 80%
+    margin-right: auto
+    margin-left: auto
+    align-items: center
+    justify-content: center
+    display: flex
+    a
+      padding: 10px
+      text-decoration: none
+      img
+        padding-left: 30px
+        padding-right: 30px
+        padding-top: 30px
+        margin-left: 10px
+        margin-right: 10px
+        width: 100px
+        height: auto
+        transition: all 0.4s ease-in-out
+        filter: blur(2px)
+      h3
+        font-family: 'Mina', sans-serif
+        font-size: 15px
+        text-transform: uppercase
+        text-decoration: none
+        color: white
+        text-align: center
+        opacity: 0
+        transition: all 0.4s ease-in-out
+        filter: blur(0px)
+      &:hover
+        img
+          filter: blur(0px)
+        h3
+          opacity: 1
+          filter: blur(0px)
+
+.particles
+  opacity: 1
+.noparticles
+  opacity: 0
+
+.stars
+  animation: animStar 100s linear infinite
+.stars2
+  animation: animStar 200s linear infinite
+.stars3
+  animation: animStar 300s linear infinite
+
+.on
+  z-index: 5
+  opacity: 0.6
+.off
+  z-index: 4
+  opacity: 0
+
+@keyframes animStar
+  from
+    transform: translateY(0px)
+  to
+    transform: translateY(-2000px)
